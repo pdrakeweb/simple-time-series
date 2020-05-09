@@ -1,0 +1,36 @@
+AllCops:
+  CacheRootDirectory: .rubocop_cache
+  TargetRubyVersion: 2.6
+  Exclude:
+  - 'vendor/**/*'
+
+# Allow long specs.
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+# Don't require documentation in specs.
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+
+# Allow numeric literals without special formatting in specs.
+Style/NumericLiterals:
+  Exclude:
+    - 'spec/**/*'
+
+# Allow compact module nesting, it is not prohibited by the style-guide.
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Lint/LiteralAsCondition:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
